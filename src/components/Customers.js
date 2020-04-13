@@ -2,11 +2,12 @@ import React,{useEffect} from 'react'
 import {connect} from 'react-redux'
 import {startCustomerAction} from "../actions/customerAction"
 import { Redirect } from 'react-router-dom'
+import {Link} from "react-router-dom"
 import axios from 'axios'
 
 const Customers = (props) => {
 
-    console.log(props)
+    console.log("customer component",props)
     useEffect(()=>{
         props.dispatch(startCustomerAction())
     },[])
@@ -75,7 +76,8 @@ const handleRemoveCustomer=(cid)=>{
                     
                 </tbody>
             </table><br/><br/><br/>
-            <button onClick={handleAddCustomer}>Add Customer</button>
+            <Link to="/customers/new" >Add Customer</Link>
+            {/* <button onClick={handleAddCustomer}>Add Customer</button> */}
         </div>
     )
 }

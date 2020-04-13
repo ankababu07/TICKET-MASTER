@@ -7,6 +7,7 @@ import deptReducer from "../reducers/deptReducer"
 import ticketReducer from "../reducers/ticketReducer"
 import employeeReducer from "../reducers/employeeReducer"
 import newEmployeeReducer from "../reducers/newEmployeeReducer"
+import editCustomerReducer from "../reducers/editCustomerReducer"
 import thunk from 'redux-thunk'
 
 const configStore = () => {
@@ -18,7 +19,8 @@ const configStore = () => {
         dept:deptReducer,
         ticket:ticketReducer,
         employee:employeeReducer,
-        newEmployee:newEmployeeReducer
+        newEmployee:newEmployeeReducer,
+        editCustomer:editCustomerReducer
     }),applyMiddleware(thunk))
     return store
 }

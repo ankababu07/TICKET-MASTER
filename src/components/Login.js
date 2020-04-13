@@ -22,7 +22,7 @@ const Login = (props) => {
 
     const handleSubmt=(e)=>{
         e.preventDefault()
-        props.dispatch(StartuserTokenAction(email,password))
+        props.dispatch(StartuserTokenAction(email,'ABC123abc'))
     }
 
     // useEffect(() => {

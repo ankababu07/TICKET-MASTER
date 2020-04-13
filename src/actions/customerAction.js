@@ -10,7 +10,7 @@ export const startCustomerAction=()=>{
         axios.get(`http://dct-ticket-master.herokuapp.com/customers`,{ headers:{'x-auth':localStorage.getItem('token')}})
                 .then(resp=>{
                     const cust=resp.data
-                    console.log("Customers",resp)
+                    console.log("Customers store",resp)
                     dispatch(setCustomers(cust))
                     
                 })

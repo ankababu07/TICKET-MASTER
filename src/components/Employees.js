@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import {startEmployeeAction} from "../actions/employeeAction"
 import {connect} from 'react-redux'
+import {Link} from "react-router-dom"
 import axios from 'axios'
 
 const Employees = (props) => {
@@ -28,7 +29,7 @@ const handleRemoveEmployee=(eid)=>{
          .then(resp=>{
             
             
-                console.log("del Cust",'--->',resp)
+                console.log("del employee",'--->',resp)
                 // props.dispatch(startCustomerAction())
             
             
@@ -72,7 +73,8 @@ const handleRemoveEmployee=(eid)=>{
                     
                 </tbody>
             </table><br/><br/><br/>
-            <button onClick={handleAddEmployee}>Add Employee</button>
+            <Link to="/employees/new">Add Employee</Link>
+            {/* <button onClick={handleAddEmployee}>Add Employee</button> */}
         </div>
     )
 }
